@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Laura Puschitz - NPI Engineer and ESG Data Collection Coordinator with experience in electronics, EMS, automation and manufacturing workflows." />
+  <title>Laura Puschitz | Resume</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1b2f;
+      --surface: rgba(14, 25, 45, 0.72);
+      --surface-strong: rgba(16, 30, 52, 0.9);
+      --surface-border: rgba(167, 222, 255, 0.14);
+      --text: #ecf5ff;
+      --muted: #9cb6d3;
+      --accent: #65d8ff;
+      --accent-2: #8b7cff;
+      --accent-3: #2ef2c6;
+      --accent-4: #ff7bd5;
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max-width: 1180px;
+      --section-gap: 130px;
+      --hero-height: min(88vh, 900px);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 20%, rgba(101, 216, 255, 0.25), transparent 0 28%),
+        radial-gradient(circle at 88% 18%, rgba(139, 124, 255, 0.22), transparent 0 24%),
+        radial-gradient(circle at 72% 82%, rgba(46, 242, 198, 0.16), transparent 0 22%),
+        linear-gradient(145deg, #050b14 0%, #091525 28%, #0c1830 55%, #08111e 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      letter-spacing: 0.01em;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(30px);
+      opacity: 0.55;
+    }
+
+    body::before {
+      top: -120px;
+      right: -100px;
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(circle, rgba(139, 124, 255, 0.5), transparent 70%);
+    }
+
+    body::after {
+      left: -120px;
+      bottom: 14vh;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(101, 216, 255, 0.24), transparent 70%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(8px);
+    }
+
+    .scroll-progress-bar {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-4), var(--accent-3));
+      box-shadow: 0 0 22px rgba(101, 216, 255, 0.55);
+      transition: width 0.15s linear;
+    }
+
+    .page-shell {
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 16px;
+      z-index: 90;
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 18px auto 0;
+      padding: 14px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      background: rgba(9, 18, 33, 0.6);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(101, 216, 255, 0.9), rgba(139, 124, 255, 0.95));
+      color: #07111f;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      box-shadow: 0 10px 30px rgba(91, 166, 255, 0.3);
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-text strong,
+    .brand-text span {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-text strong {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .brand-text span {
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a,
+    .nav-links button {
+      border: 0;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font: inherit;
+      cursor: pointer;
+      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links button:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding-bottom: 72px;
+    }
+
+    .hero {
+      min-height: var(--hero-height);
+      display: grid;
+      align-items: center;
+      padding: 64px 0 40px;
+    }
+
+    .hero-card {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.95fr);
+      gap: 34px;
+      padding: clamp(28px, 4vw, 48px);
+      border-radius: 34px;
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+        linear-gradient(145deg, rgba(11, 22, 40, 0.94), rgba(8, 16, 30, 0.84));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(8px);
+      pointer-events: none;
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    .hero-card::before {
+      width: 280px;
+      height: 280px;
+      top: -90px;
+      right: -40px;
+      background: radial-gradient(circle, rgba(139, 124, 255, 0.38), transparent 65%);
+    }
+
+    .hero-card::after {
+      width: 260px;
+      height: 260px;
+      bottom: -110px;
+      left: -45px;
+      background: radial-gradient(circle, rgba(46, 242, 198, 0.28), transparent 65%);
+    }
+
+    .hero-copy,
+    .hero-photo {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #d9f6ff;
+      background: rgba(101, 216, 255, 0.1);
+      border: 1px solid rgba(101, 216, 255, 0.22);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+      box-shadow: 0 0 18px rgba(101, 216, 255, 0.65);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 8vw, 5.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      text-wrap: balance;
+    }
+
+    .headline-accent {
+      display: block;
+      font-size: 0.9em;
+      background: linear-gradient(90deg, #ffffff 0%, #8de9ff 38%, #af9fff 76%, #dbf9ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      margin: 20px 0 0;
+      max-width: 700px;
+      font-size: clamp(1.08rem, 2.2vw, 1.26rem);
+      line-height: 1.75;
+      color: #d7e8fb;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      font-size: 0.93rem;
+      line-height: 1;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .meta-pill:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button-primary,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 14px 20px;
+      border-radius: 18px;
+      font-weight: 700;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .button-primary {
+      color: #04111f;
+      background: linear-gradient(135deg, #91efff, #7c87ff 58%, #96f4d7);
+      box-shadow: 0 18px 34px rgba(92, 161, 255, 0.28);
+    }
+
+    .button-secondary {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .button-primary:hover,
+    .button-secondary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 38px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .stat-card {
+      padding: 18px 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.04em;
+    }
+
+    .stat-card span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .hero-photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .photo-shell {
+      width: min(100%, 360px);
+      perspective: 1400px;
+    }
+
+    .photo-card {
+      position: relative;
+      padding: 16px;
+      border-radius: 30px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)),
+        rgba(7, 17, 31, 0.74);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 30px 55px rgba(3, 10, 20, 0.45);
+      transform: rotateY(-10deg) rotateX(7deg);
+      transform-style: preserve-3d;
+    }
+
+    .photo-card::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(101, 216, 255, 0.12), transparent 34%, rgba(139, 124, 255, 0.14));
+      pointer-events: none;
+    }
+
+    .photo-frame {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      border-radius: 22px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.1), transparent 28%),
+        linear-gradient(160deg, #10213a, #0b172a 48%, #09111e 100%);
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+
+    .photo-placeholder {
+      position: relative;
+      width: min(76%, 240px);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.25), transparent 18%),
+        linear-gradient(135deg, rgba(101, 216, 255, 0.22), rgba(139, 124, 255, 0.26));
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #edfbff;
+      font-size: clamp(3rem, 7vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -0.06em;
+      box-shadow:
+        0 20px 40px rgba(4, 12, 24, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .photo-placeholder::before {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      border-radius: 50%;
+      border: 1px dashed rgba(139, 233, 255, 0.2);
+      animation: spin 18s linear infinite;
+    }
+
+    .photo-label {
+      margin-top: 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .photo-label strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 4px;
+      font-size: 0.98rem;
+    }
+
+    .section {
+      padding-top: var(--section-gap);
+      scroll-margin-top: 110px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      letter-spacing: -0.05em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      max-width: 520px;
+      color: var(--muted);
+      line-height: 1.75;
+      text-align: right;
+    }
+
+    .glass-panel {
+      position: relative;
+      padding: clamp(24px, 3vw, 32px);
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+      overflow: hidden;
+    }
+
+    .glass-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(101, 216, 255, 0.08), transparent 72%);
+      pointer-events: none;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.85fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .about-copy {
+      font-size: 1.03rem;
+      line-height: 1.95;
+      color: #dbe8f8;
+    }
+
+    .about-copy p {
+      margin: 0;
+    }
+
+    .about-side {
+      display: grid;
+      gap: 16px;
+      align-content: start;
+    }
+
+    .mini-card {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mini-card h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .mini-card p,
+    .mini-card ul {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      padding-left: 18px;
+    }
+
+    .mini-card p {
+      padding-left: 0;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .skill-box {
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-4px);
+      border-color: rgba(101, 216, 255, 0.24);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .skill-box h3 {
+      margin: 0 0 16px;
+      font-size: 1.06rem;
+      letter-spacing: -0.02em;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      color: #eff7ff;
+      background: linear-gradient(135deg, rgba(101, 216, 255, 0.14), rgba(139, 124, 255, 0.14));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .timeline-wrap {
+      position: relative;
+      padding-left: 104px;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 8px;
+      left: 42px;
+      width: 2px;
+      height: calc(100% - 16px);
+      background: linear-gradient(180deg, rgba(101, 216, 255, 0.08), rgba(139, 124, 255, 0.45), rgba(46, 242, 198, 0.08));
+      overflow: hidden;
+    }
+
+    .timeline-line::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(101, 216, 255, 0.95), rgba(139, 124, 255, 0.88), rgba(46, 242, 198, 0.92));
+      transform: scaleY(var(--timeline-progress, 0));
+      transform-origin: top center;
+      transition: transform 0.18s linear;
+      box-shadow: 0 0 18px rgba(101, 216, 255, 0.45);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 28px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-badge {
+      position: absolute;
+      left: -104px;
+      top: 24px;
+      width: 82px;
+      padding: 10px 8px;
+      border-radius: 18px;
+      text-align: center;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      color: #dff6ff;
+      background: rgba(28, 42, 65, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 14px 25px rgba(0, 0, 0, 0.14);
+      z-index: 2;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -68px;
+      top: 6px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border: 3px solid rgba(7, 17, 31, 0.95);
+      box-shadow: 0 0 0 8px rgba(101, 216, 255, 0.08), 0 0 22px rgba(101, 216, 255, 0.45);
+    }
+
+    .timeline-card {
+      position: relative;
+      padding: 24px 24px 22px;
+      border-radius: 24px;
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+      overflow: hidden;
+    }
+
+    .timeline-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(101, 216, 255, 0.7), rgba(255, 255, 255, 0.08), rgba(139, 124, 255, 0.55));
+    }
+
+    .timeline-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .timeline-title {
+      min-width: 0;
+      flex: 1 1 320px;
+    }
+
+    .timeline-title h3 {
+      margin: 0;
+      font-size: 1.14rem;
+      letter-spacing: -0.03em;
+      line-height: 1.35;
+    }
+
+    .timeline-title p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .timeline-period {
+      flex-shrink: 0;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: #dff9ff;
+      background: rgba(101, 216, 255, 0.08);
+      border: 1px solid rgba(101, 216, 255, 0.18);
+    }
+
+    .bullet-list {
+      margin: 0;
+      padding-left: 1.25rem;
+      display: grid;
+      gap: 14px;
+      color: #dbe8f8;
+      line-height: 1.8;
+    }
+
+    .bullet-list li::marker {
+      color: var(--accent);
+    }
+
+    .projects-grid,
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card,
+    .education-card {
+      position: relative;
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .project-card:hover,
+    .education-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.065);
+      border-color: rgba(101, 216, 255, 0.22);
+    }
+
+    .project-card::before,
+    .education-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+      opacity: 0.8;
+    }
+
+    .card-label {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #dff6ff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-card h3,
+    .education-card h3 {
+      margin: 16px 0 12px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: -0.03em;
+    }
+
+    .project-card p,
+    .education-card p,
+    .project-card ul,
+    .education-card ul {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .project-card ul,
+    .education-card ul {
+      padding-left: 1.15rem;
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .card-foot {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.84rem;
+      color: #e7f7ff;
+    }
+
+    .note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      color: #dbeaf6;
+      line-height: 1.75;
+    }
+
+    .footer {
+      padding: 70px 0 40px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .footer strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .reveal,
+    .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.show,
+    .reveal-stagger.show > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-stagger.show > *:nth-child(2) { transition-delay: 0.08s; }
+    .reveal-stagger.show > *:nth-child(3) { transition-delay: 0.14s; }
+    .reveal-stagger.show > *:nth-child(4) { transition-delay: 0.2s; }
+    .reveal-stagger.show > *:nth-child(5) { transition-delay: 0.26s; }
+    .reveal-stagger.show > *:nth-child(6) { transition-delay: 0.32s; }
+
+    .floaty {
+      animation: floaty 8s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 1080px) {
+      .hero-card,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-photo {
+        order: -1;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .section-heading p {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 860px) {
+      :root {
+        --section-gap: 96px;
+      }
+
+      .topbar {
+        position: relative;
+        top: 0;
+        border-radius: 24px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding-top: 24px;
+      }
+
+      .hero-card {
+        padding: 24px;
+      }
+
+      .hero-stats,
+      .skills-grid,
+      .projects-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-wrap {
+        padding-left: 72px;
+      }
+
+      .timeline-line {
+        left: 24px;
+      }
+
+      .timeline-badge {
+        left: -72px;
+        width: 56px;
+        padding: 8px 4px;
+        font-size: 0.74rem;
+      }
+
+      .timeline-dot {
+        left: -55px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        letter-spacing: 0;
+      }
+
+      .topbar {
+        width: min(var(--max-width), calc(100% - 20px));
+        padding: 14px;
+        gap: 14px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .brand {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .container {
+        width: min(var(--max-width), calc(100% - 20px));
+      }
+
+      .hero-card {
+        border-radius: 28px;
+      }
+
+      .hero-actions,
+      .hero-meta {
+        flex-direction: column;
+      }
+
+      .button-primary,
+      .button-secondary,
+      .meta-pill {
+        width: 100%;
+      }
+
+      .photo-card {
+        transform: none;
+      }
+
+      .timeline-wrap {
+        padding-left: 0;
+      }
+
+      .timeline-line,
+      .timeline-badge,
+      .timeline-dot {
+        display: none;
+      }
+
+      .timeline-card {
+        padding: 22px 18px;
+      }
+
+      .section-heading h2 {
+        font-size: 1.9rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollBar"></div>
+  </div>
+
+  <div class="page-shell">
+    <header class="topbar reveal">
+      <div class="brand">
+        <div class="brand-mark">LP</div>
+        <div class="brand-text">
+          <strong>Laura Puschitz</strong>
+          <span>Electronics • NPI • ESG Workflows</span>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <article class="hero-card floaty" id="heroCard">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">Open to ambitious product and engineering environments</div>
+            <h1>
+              Laura Puschitz
+              <span class="headline-accent"><br>Electronics technician with a passion for technology, IT and innovation.</span>
+            </h1>
+            <p class="hero-subtitle">
+              NPI Engineer and ESG Data Collection Coordinator with hands-on experience in electronics,
+              manufacturing, prototype launches, test engineering and workflow automation
+            </p>
+
+            <div class="hero-meta">
+              <a class="meta-pill" href="mailto:l.puschitz@outlook.com">✉️ l.puschitz@outlook.com</a>
+              <a class="meta-pill" href="https://www.linkedin.com/in/laura-puschitz-535322303" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+              <span class="meta-pill">📍 Linz, Austria</span>
+            </div>
+
+            <div class="hero-actions">
+              <a class="button-primary" href="resume.pdf">Download PDF-Resume</a>
+              <a class="button-primary" href="#experience">Explore experience</a>
+              <a class="button-secondary" href="mailto:l.puschitz@outlook.com?subject=Regarding%20your%20application">Contact me</a>
+            </div>
+
+            <div class="hero-stats reveal-stagger"> 
+              <div class="stat-card">
+                <strong>10+</strong>
+                <span>years across electronics, manufacturing, and industrial workflows</span>
+              </div>
+              <div class="stat-card">
+                <strong>2</strong>
+                <span>parallel roles spanning NPI execution and ESG data coordination</span>
+              </div>
+              <div class="stat-card">
+                <strong>DE / EN</strong>
+                <span>professional communication in German and English</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-photo reveal">
+            <div class="photo-shell">
+              <div class="photo-card">
+                <div class="photo-frame">
+                  
+                  <img src="LauraPuschitz.jpg" alt="Portrait of Laura Puschitz" style="width:100%;height:100%;object-fit:cover;" />
+                
+                  <!--<div class="photo-placeholder" aria-label="Profile photo placeholder">LP</div>-->
+                </div>
+                <div class="photo-label">
+                  <strong></strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-heading reveal">
+          <h2>About</h2>
+          <p>A more personal snapshot of the experience behind the resume.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-panel reveal">
+            <div class="about-copy">
+              <p>
+                Experienced electronics engineer with expertise in new product introduction, test engineering,
+                and manufacturing-related workflow coordination. Skilled in leading prototype rollouts,
+                aligning cross-functional teams (from accounting- to production-teams), and automating data-driven processes.
+              </p>
+              <p style="margin-top:16px;">
+                I am particularly interested in connecting hardware, software, and structured data to improve
+                production workflows and day-to-day operations in the electronics industry. In addition, I have
+                gained experience in collecting company data and integrating it into more automated workflows,
+                reducing manual effort and minimizing the need for individual intervention.
+              </p>
+              <p style="margin-top:16px;">
+                I combine technical depth with practical execution, and I enjoy translating complexity into
+                reliable, scalable processes.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-side reveal-stagger">
+            <div class="mini-card">
+              <h3>Focus areas</h3>
+              <ul>
+                <li>New Product Introduction</li>
+                <li>Hardware test engineering</li>
+                <li>Process automation</li>
+                <li>ESG data coordination</li>
+              </ul>
+            </div>
+            <div class="mini-card">
+              <h3>Strengths</h3>
+              <p>Cross-functional communication, structured execution, technical documentation, and practical problem solving.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Languages</h3>
+              <p>German and English</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading reveal">
+          <h2>Skills</h2>
+        </div>
+
+        <div class="skills-grid reveal-stagger">
+          <div class="skill-box">
+            <h3>Engineering & technical tools</h3>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">Java</span>
+              <span class="chip">HTML & CSS</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">Power BI</span>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h3>Platforms & collaboration</h3>
+            <div class="chips">
+              <span class="chip">Jira</span>
+              <span class="chip">Confluence</span>
+              <span class="chip">Notion</span>
+              <span class="chip">Microsoft Power Tools</span>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h3>Modern workflow mindset</h3>
+            <div class="chips">
+              <span class="chip">AI-assisted workflows</span>
+              <span class="chip">Claude & Codex</span>
+              <span class="chip">Vibe coding</span>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h3>Operational strengths</h3>
+            <div class="chips">
+              <span class="chip">NPI coordination</span>
+              <span class="chip">PCBA costing process</span>
+              <span class="chip">Manufacturing support</span>
+              <span class="chip">Data collection</span>
+              <span class="chip">Process standardization</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading reveal">
+          <h2>Experience</h2>
+        </div>
+
+        <div class="timeline-wrap glass-panel" id="timelineWrap">
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <article class="timeline-item">
+            <div class="timeline-badge">2025<br>today</div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-title">
+                  <h3>NPI Engineer — Kontron Austria GmbH, Engerwitzdorf</h3>
+                  <p>Driving the transition of new electronic products from prototype status into production readiness.</p>
+                </div>
+                <div class="timeline-period">09/2025 – Present</div>
+              </div>
+              <ul class="bullet-list">
+                <li>Led the cross-functional rollout of new electronic products into production and prepared the technical documentation and approvals required for an on-schedule manufacturing start.</li>
+                <li>Coordinated BOM cost calculations and feasibility analyses for electronic assembly prototypes while supporting a smooth handover into production.</li>
+                <li>Created assembly and test instructions and supported production teams during launch to reduce friction during ramp-up.</li>
+                <li>Acted as the liaison between Sales, Purchasing, Supply Chain, and Manufacturing to clarify technical requirements and resolve launch-phase issues.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-badge">2025<br>today</div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-title">
+                  <h3>ESG Data Collection Coordinator — Kontron Austria GmbH, Engerwitzdorf & Ebbs</h3>
+                  <p>Bridging operational data collection with structured, deadline-driven reporting processes.</p>
+                </div>
+                <div class="timeline-period">09/2025 – Present</div>
+              </div>
+              <ul class="bullet-list">
+                <li>Coordinated internal departments such as Accounting, HR, Facility Management & IT, and Procurement regarding company data entry.</li>
+                <li>Ensured that collected data met Group standards and could be submitted in a consistent, structured way.</li>
+                <li>Established more standardized submission processes to reduce manual effort and improve repeatability.</li>
+                <li>Served as the contact person for Group-related questions regarding recorded company data and reporting expectations.</li>
+                <li>Maintained compliance with set timelines for data entry and submission.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-badge">2018<br>2025</div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-title">
+                  <h3>Senior Hardware Test Engineer — eurofunk KAPPACHER GmbH, Salzburg</h3>
+                  <p>Improving test coverage, diagnostics, and production quality for safety-critical electronics.</p>
+                </div>
+                <div class="timeline-period">09/2018 – 09/2025</div>
+              </div>
+              <ul class="bullet-list">
+                <li>Developed and implemented comprehensive hardware test plans for safety-critical electronic assemblies.</li>
+                <li>Improved test coverage and reduced defect rates by identifying key root causes and driving corrective action.</li>
+                <li>Diagnosed complex PCB assembly issues together with development engineers and helped reduce average repair time by approximately 25%.</li>
+                <li>Optimized production test processes by introducing automated test tools and quality checks, improving first-pass yield.</li>
+                <li>Mentored junior engineers and production staff to support consistently high quality standards in production.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-badge">2014<br>2018</div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-title">
+                  <h3>Apprenticeship in Applied Electronics & Information Technology — eurofunk KAPPACHER GmbH, Salzburg</h3>
+                  <p>Built the technical foundation across electronics, IT systems, and programming.</p>
+                </div>
+                <div class="timeline-period">09/2014 – 09/2018</div>
+              </div>
+              <ul class="bullet-list">
+                <li>Completed a dual vocational training program in Applied Electronics and IT and obtained the vocational high school diploma.</li>
+                <li>Built hands-on knowledge in circuit design, embedded systems, IT infrastructure, networking, and programming.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading reveal">
+          <h2>Projects</h2>
+          <p>Selected work that combines electronics understanding with practical digital execution.</p>
+        </div>
+
+        <div class="projects-grid reveal-stagger">
+          <article class="project-card">
+            <span class="card-label">Private project</span>
+            <h3>Gerber DFM / DFA Analyzer</h3>
+            <p>
+              A tool concept aimed at helping hardware developers and EMS companies verify manufacturability
+              and assembly feasibility for printed circuit boards before production risks become expensive.
+            </p>
+            <ul>
+              <li>Supports checking assembly prototypes for manufacturability and production suitability.</li>
+              <li>Helps compare assembly versions to detect differences in PCB data, component placement, or BOM content.</li>
+              <li>Explores recommendations for cost-aware design adjustments, such as changes that simplify assembly.</li>
+            </ul>
+            <div class="note">
+              <strong>Current status:</strong> still in development and not yet production-ready. As I am not a formally trained software developer, this project is being developed with AI-supported coding workflows plus manual review and validation.
+            </div>
+            <div class="card-foot">
+              <span class="tag">DFM / DFA</span>
+              <span class="tag">Private repository</span>
+              <span class="tag">Electronics workflow</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <span class="card-label">Web project</span>
+            <h3>Company Homepage & Online Training Academy</h3>
+            <p>
+              I created a website for my father’s company and actively supported the setup of an online
+              training academy to enable customers to access digital training content.
+            </p>
+            <ul>
+              <li>Served as the technical point of contact for the website and the online training environment.</li>
+              <li>Worked on the academy setup in coordination with an external company in Vienna.</li>
+              <li>Combined technical implementation support with practical stakeholder communication.</li>
+            </ul>
+            <div class="note">
+              <strong>Current status:</strong> the website is still under development and is expected to go live soon.
+            </div>
+            <div class="card-foot">
+              <span class="tag">Website</span>
+              <span class="tag">Online academy</span>
+              <span class="tag">Technical coordination</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section-heading reveal">
+          <h2>Education</h2>
+          <p>The training path behind the engineering and process mindset.</p>
+        </div>
+
+        <div class="education-grid reveal-stagger">
+          <article class="education-card">
+            <span class="card-label">University</span>
+            <h3>Bachelor of Science in Applied Electronics and Information Technology — Johannes Kepler University Linz</h3>
+            <p>2024 – 2025</p>
+            <div class="note">Studies were discontinued in order to return to industry and continue building practical experience.</div>
+          </article>
+
+          <article class="education-card">
+            <span class="card-label">Evening school</span>
+            <h3>High school diploma, Salzburg</h3>
+            <p>2017 – 2023</p>
+          </article>
+
+          <article class="education-card">
+            <span class="card-label">Apprenticeship</span>
+            <h3>Electronics & IT dual apprenticeship, Salzburg</h3>
+            <p>2014 – 2018</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer reveal">
+        <strong>Laura Puschitz</strong>
+        Designed as a single self-contained HTML resume page for direct hosting on GitHub Pages.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const scrollBar = document.getElementById('scrollBar');
+      const revealTargets = document.querySelectorAll('.reveal, .reveal-stagger, .timeline-item');
+      const heroCard = document.getElementById('heroCard');
+      const timelineWrap = document.getElementById('timelineWrap');
+
+      function updateScrollBar() {
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+        scrollBar.style.width = Math.min(progress, 100) + '%';
+      }
+
+      function updateTimelineProgress() {
+        if (!timelineWrap) return;
+        const rect = timelineWrap.getBoundingClientRect();
+        const visible = window.innerHeight - rect.top;
+        const total = rect.height + window.innerHeight * 0.2;
+        const progress = Math.max(0, Math.min(visible / total, 1));
+        timelineWrap.style.setProperty('--timeline-progress', progress.toFixed(3));
+      }
+
+      updateScrollBar();
+      updateTimelineProgress();
+
+      window.addEventListener('scroll', function () {
+        updateScrollBar();
+        updateTimelineProgress();
+      }, { passive: true });
+
+      window.addEventListener('resize', updateTimelineProgress);
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, { threshold: 0.14 });
+
+      revealTargets.forEach(function (target) {
+        observer.observe(target);
+      });
+
+      if (heroCard && window.matchMedia('(prefers-reduced-motion: reduce)').matches === false) {
+        heroCard.addEventListener('mousemove', function (event) {
+          if (window.innerWidth < 860) return;
+          const rect = heroCard.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+          const rotateY = ((x / rect.width) - 0.5) * 10;
+          const rotateX = (0.5 - (y / rect.height)) * 8;
+          heroCard.style.transform = 'perspective(1600px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg) translateY(-4px)';
+        });
+
+        heroCard.addEventListener('mouseleave', function () {
+          heroCard.style.transform = 'perspective(1600px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
