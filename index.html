@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a25">
+  <meta name="description" content="Laura Puschitz — electronics and IT professional with experience in NPI, hardware testing, technical customer communication and process automation.">
+  <meta property="og:title" content="Laura Puschitz — Electronics, Software &amp; Automation">
+  <meta property="og:description" content="NPI, automated hardware testing and technical solutions. Explore my experience, projects and CV.">
+  <meta property="og:type" content="website">
+  <title>Laura Puschitz | Electronics, Software &amp; Automation</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23111a25'/%3E%3Ctext%20x='32'%20y='42'%20text-anchor='middle'%20font-family='Arial,sans-serif'%20font-weight='700'%20font-size='30'%20fill='%2384efc2'%3ELP%3C/text%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#172331;--muted:#546372;--paper:#f5f7f9;--line:#d9e1e7;--dark:#111a25;--dark-muted:#b7c5d4;--mint:#84efc2;--teal:#126a54;--mono:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;--sans:Inter,"Segoe UI",Arial,sans-serif}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:100px}
+    body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-underline-offset:5px}
+    button{font:inherit}
+    a,button,summary{-webkit-tap-highlight-color:transparent}
+    :focus-visible{outline:3px solid #21856c;outline-offset:5px}
+    .dark :focus-visible,.site-header :focus-visible{outline-color:var(--mint)}
+    .wrap{width:min(1180px,calc(100% - 80px));margin-inline:auto}
+    .skip{position:fixed;top:12px;left:12px;transform:translateY(-160%);z-index:10;background:var(--mint);padding:10px 18px;color:var(--dark);font-weight:700}
+    .skip:focus{transform:translateY(0)}
+    .site-header{position:sticky;top:0;z-index:5;background:#111a25f7;color:#fff;border-bottom:1px solid #ffffff15;backdrop-filter:blur(16px)}
+    .header-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:inline-flex;gap:12px;align-items:center;text-decoration:none;font-weight:700;letter-spacing:-.02em}
+    .brand-mark{width:38px;height:38px;display:grid;place-items:center;border:1px solid #84efc25c;border-radius:8px;font:700 15px var(--mono);color:var(--mint)}
+    .nav{display:flex;align-items:center;gap:26px}
+    .nav a{font-size:14px;text-decoration:none;color:#c3d0dd;padding-block:10px}
+    .nav a:hover{color:var(--mint)}
+    .nav .nav-cv{border:1px solid #5d6d7c;border-radius:6px;padding:8px 15px;color:#fff}
+    .menu-toggle{display:none;background:transparent;color:#fff;border:1px solid #5d6d7c;border-radius:6px;padding:7px 12px;min-height:44px}
+    .dark{background:var(--dark);color:#f7f9fc}
+    .hero{position:relative;overflow:hidden;background-image:linear-gradient(#ffffff03 1px,transparent 1px),linear-gradient(90deg,#ffffff03 1px,transparent 1px);background-size:64px 64px}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(0,1fr);gap:64px;padding-block:72px 58px;align-items:center}
+    .eyebrow{font:500 13px/1.6 var(--mono);letter-spacing:.10em;text-transform:uppercase;color:var(--mint);margin:0 0 24px}
+    h1{font-size:clamp(60px,7.5vw,100px);line-height:.98;letter-spacing:-.065em;margin:0 0 27px;font-weight:750}
+    h1 .dot{color:var(--mint)}
+    .hero-title{font-size:clamp(21px,2.1vw,27px);line-height:1.3;letter-spacing:-.025em;margin:0 0 18px;color:#eef4fa;font-weight:600}
+    .hero-copy{max-width:560px;color:var(--dark-muted);margin:0;font-size:17px;line-height:1.75}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1px solid transparent;padding:11px 22px;border-radius:7px;font-weight:650;text-decoration:none;line-height:1.5;transition:background .18s,transform .18s}
+    .button:hover{transform:translateY(-2px)}
+    .button-primary{color:var(--dark);background:var(--mint)}
+    .button-primary:hover{background:#a5f5d5}
+    .button-outline{border-color:#5d6d7c;color:#fff}
+    .button-outline:hover{background:#ffffff0c}
+    .hero-meta{font-size:14px;color:var(--dark-muted);margin:28px 0 0}
+    .hero-meta a{color:#e7f2fb}
+    .profile{position:relative;margin:0}
+    .portrait-frame{position:relative;aspect-ratio:4/4.7;background:linear-gradient(145deg,#263b4d,#172b35);border:1px solid #84efc244;border-radius:10px 10px 70px 10px;overflow:hidden;display:grid;place-items:center}
+    .portrait-frame::before,.portrait-frame::after{position:absolute;content:"";pointer-events:none}
+    .portrait-frame::before{inset:24px;border:1px solid #84efc233;border-radius:3px 3px 45px 3px;z-index:1}
+    .portrait-frame::after{width:46%;height:4px;top:0;left:24px;background:var(--mint);z-index:2}
+    .portrait{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:0}
+    [hidden]{display:none!important}
+    .monogram{font-size:clamp(90px,11vw,160px);font-weight:700;letter-spacing:-.08em;line-height:1;color:var(--mint);user-select:none}
+    .profile-caption{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-top:18px;color:var(--dark-muted);font:13px/1.65 var(--mono)}
+    .profile-caption strong{color:#fff;font-weight:500}
+    .profile-caption .caption-rule{width:28px;height:1px;flex-shrink:0;background:var(--mint);margin-top:10px}
+    .results{border-top:1px solid #ffffff20}
+    .results-grid{display:grid;grid-template-columns:1fr 1fr 1.42fr}
+    .result{padding:29px 36px 32px 0}
+    .result+.result{border-left:1px solid #ffffff20;padding-left:36px}
+    .result-number{display:block;font-size:47px;line-height:1.1;font-weight:650;letter-spacing:-.05em;color:#fff;margin-bottom:7px}
+    .result-number .unit{font-size:21px;letter-spacing:-.01em;color:var(--mint)}
+    .result-number .to{color:var(--mint);font-size:25px;vertical-align:middle;letter-spacing:0;margin-inline:7px}
+    .result-label{font-size:14px;color:var(--dark-muted);display:block;line-height:1.5}
+    .result-context{font-size:12px;color:#99adbf;display:block;margin-top:4px}
+    section.section{padding-block:82px}
+    .section-head{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:end;margin-bottom:38px}
+    .section-index{display:block;font:13px/1.5 var(--mono);color:var(--teal);letter-spacing:.06em;margin-bottom:11px}
+    h2{font-size:clamp(31px,4vw,45px);line-height:1.15;letter-spacing:-.04em;margin:0;font-weight:650}
+    .section-intro{color:var(--muted);margin:0;max-width:470px;line-height:1.7}
+    h3{font-size:20px;line-height:1.35;letter-spacing:-.02em;margin:0 0 12px;font-weight:650}
+    .focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+    .focus-item{padding-top:23px;border-top:2px solid var(--ink)}
+    .focus-item p{color:var(--muted);margin:0}
+    .focus-label{font:13px var(--mono);color:var(--teal);margin-bottom:18px;display:block}
+    .career{border-top:1px solid var(--line);margin-top:40px;padding-top:26px;display:grid;grid-template-columns:160px 1fr;gap:30px}
+    .career h3{font-size:16px;margin:0}
+    .career p{margin:0;color:var(--muted);font-size:15px}
+    .experience-section{background:#fff;border-block:1px solid var(--line)}
+    .experience{padding:30px 0;display:grid;grid-template-columns:230px minmax(0,1fr);gap:46px;border-top:1px solid var(--line)}
+    .experience-date{font:14px/1.6 var(--mono);color:var(--muted);margin:3px 0 9px}
+    .company{font-size:15px;font-weight:650;margin:0}
+    .responsibility{display:inline-block;color:var(--teal);font-size:13px;margin-top:9px}
+    .experience h3{font-size:25px;margin-bottom:12px}
+    .experience ul{padding-left:19px;margin:0;color:var(--muted)}
+    .experience li{padding-left:5px;margin:0 0 7px}
+    .experience li::marker{color:var(--teal)}
+    .experience li:last-child{margin-bottom:0}
+    .experience strong{font-weight:650;color:var(--ink)}
+    .project-list{border-top:1px solid var(--line)}
+    .project{display:grid;grid-template-columns:65px 1fr 230px;gap:30px;align-items:start;border-bottom:1px solid var(--line);padding:29px 0}
+    .project-number{font:14px var(--mono);color:var(--teal);margin-top:5px}
+    .project h3{font-size:24px}
+    .project p{margin:0;color:var(--muted);max-width:640px}
+    .project-tags{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end;margin-top:4px}
+    .tag{font-size:13px;line-height:1.5;padding:5px 10px;border:1px solid #cbd5dc;border-radius:5px;white-space:normal}
+    .toolkit-section{background:#eaf0f3}
+    .toolkit-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px 50px}
+    .skill-group{border-top:1px solid #c6d3db;padding-top:21px}
+    .skill-group h3{font-size:18px}
+    .skill-group p{color:var(--muted);margin:0;line-height:1.85}
+    .education-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:65px}
+    .education-list{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+    .education-list li{padding:19px 0;border-bottom:1px solid var(--line)}
+    .education-list h3{font-size:18px;margin-bottom:5px}
+    .education-list p{margin:0;color:var(--muted);font-size:15px}
+    .education-date{font:13px/1.6 var(--mono);color:var(--teal);display:block;margin-bottom:6px}
+    .languages{padding:26px 29px;background:#eaf0f3;border-radius:8px;align-self:start}
+    .languages h3{font-size:23px;margin-bottom:22px}
+    .language-row{display:flex;justify-content:space-between;gap:20px;padding-block:12px;border-top:1px solid #c6d3db;font-size:16px}
+    .language-row span{color:var(--muted)}
+    .language-note{color:var(--muted);font-size:14px;margin:18px 0 0}
+    .contact{padding-block:65px 30px}
+    .contact .section-index{color:var(--mint)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;padding-bottom:50px}
+    .contact h2{max-width:480px}
+    .contact-links{display:flex;align-items:flex-start;flex-direction:column;gap:18px}
+    .email-link{font-size:clamp(19px,2.5vw,29px);letter-spacing:-.02em;text-decoration:none;border-bottom:1px solid #84efc269;padding-bottom:6px;overflow-wrap:anywhere}
+    .contact-secondary{display:flex;gap:25px;flex-wrap:wrap;color:var(--dark-muted);font-size:15px}
+    footer{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid #ffffff20;padding-top:23px;color:var(--dark-muted);font-size:13px}
+    footer p{margin:0}
+    @media(min-width:1600px){.hero-grid{padding-block:88px 74px}}
+    @media(max-width:1000px){.wrap{width:calc(100% - 52px)}.hero-grid{gap:35px;grid-template-columns:1.2fr 1fr}h1{font-size:clamp(60px,8vw,85px)}.nav{gap:18px}.project{grid-template-columns:40px 1fr 180px;gap:22px}.experience{grid-template-columns:190px 1fr;gap:32px}.result{padding-right:20px}.result+.result{padding-left:20px}.result-number{font-size:40px}.focus-grid{gap:24px}.education-grid{gap:40px}}
+    @media(max-width:760px){html{scroll-padding-top:88px}.wrap{width:calc(100% - 40px)}.header-inner{min-height:70px;position:relative}.brand{font-size:15px}.brand-mark{width:34px;height:34px}.nav{gap:14px;flex-wrap:wrap;justify-content:flex-end}.nav a{font-size:13px}.nav .nav-cv{padding:7px 10px}.hero-grid{grid-template-columns:1fr;gap:36px;padding-block:43px 38px}h1{font-size:clamp(65px,14vw,95px);line-height:1}.eyebrow{font-size:12px;letter-spacing:.06em;margin-bottom:23px}.hero-title{font-size:24px}.hero-copy{font-size:16px}.profile{width:min(100%,390px)}.portrait-frame{aspect-ratio:4/4.3}.monogram{font-size:130px}.results-grid{grid-template-columns:1fr 1fr}.result{padding:25px 15px 23px 0}.result+.result{padding-left:20px}.result:last-child{grid-column:1/-1;border-left:0;border-top:1px solid #ffffff20;padding-left:0}.result-number{font-size:42px}.section-head{grid-template-columns:1fr;gap:19px;margin-bottom:30px}.section-intro{max-width:none}section.section{padding-block:56px}.focus-grid{grid-template-columns:1fr;gap:25px}.focus-item{padding-top:18px}.focus-label{margin-bottom:11px}.career{grid-template-columns:1fr;gap:11px;margin-top:29px}.experience{grid-template-columns:1fr;gap:15px;padding-block:26px}.experience-date{margin-top:0}.responsibility{margin-top:4px}.experience h3{font-size:23px}.project{grid-template-columns:28px 1fr;gap:16px;padding-block:26px}.project-tags{grid-column:2;justify-content:flex-start;margin:0}.project h3{font-size:22px}.toolkit-grid{grid-template-columns:1fr;gap:27px}.education-grid{grid-template-columns:1fr;gap:33px}.contact-grid{grid-template-columns:1fr;gap:28px}.contact{padding-top:50px}.email-link{font-size:24px}}
+    @media(max-width:590px){.js .menu-toggle{display:inline-flex}.js .nav{display:none;position:absolute;top:69px;left:-20px;right:-20px;padding:16px 20px 20px;background:#111a25;border-bottom:1px solid #4c5e6d;flex-direction:column;align-items:stretch;gap:3px}.js .nav.is-open{display:flex}.js .nav a{font-size:16px;padding:10px 0}.js .nav .nav-cv{padding:10px 14px;margin-top:7px;text-align:center}body:not(.js) .header-inner{flex-wrap:wrap;padding-block:14px}body:not(.js) .nav{width:100%;justify-content:flex-start}.hero-meta{font-size:13px}.button{padding-inline:18px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+    @media print{body{font-size:10pt;line-height:1.45;background:#fff;color:#000}.wrap{width:100%}.site-header,.skip,.menu-toggle,.actions,.profile,.contact{display:none!important}.dark,.hero,.toolkit-section{background:#fff!important;color:#000!important}.hero-grid{display:block;padding:0 0 20px}.eyebrow,.hero-meta,.hero-copy,.hero-title,.result-label,.result-context,.result-number{color:#000!important}h1{font-size:34pt;line-height:1.1;margin:0 0 10px}h1 br{display:none}h1 .dot{color:#000}.hero-title{font-size:14pt}.hero-copy{max-width:none;font-size:10pt}.hero-meta{margin-top:10px}.results-grid{border-block:1px solid #aaa}.result{padding:12px!important;border:0!important}.result-number{font-size:23pt}.result-number .unit{font-size:11pt;color:#000}.result-number .to{color:#000}.result-label{font-size:9pt}.result-context{font-size:8pt}section.section{padding-block:22px}.section-head{display:block;margin-bottom:16px}h2{font-size:20pt}.section-index{font-size:9pt;margin-bottom:6px}.section-intro{font-size:10pt;margin-top:8px}.experience{grid-template-columns:150px 1fr;gap:20px;padding-block:14px;break-inside:avoid}.experience h3{font-size:13pt}.experience-date,.company{font-size:9pt}.project{grid-template-columns:25px 1fr;gap:14px;break-inside:avoid}.project-tags{display:none}.project h3{font-size:13pt}.focus-grid{gap:20px}.focus-item{break-inside:avoid}.focus-item h3,.skill-group h3,.education-list h3{font-size:11pt}.focus-label{font-size:9pt}.focus-item p,.project p,.skill-group p,.education-list p,.career p{font-size:10pt}.career{grid-template-columns:120px 1fr;gap:20px}.skill-group{break-inside:avoid}.languages{background:#fff;border:1px solid #aaa}.language-row,.languages h3{font-size:11pt}.language-note{font-size:9pt}@page{margin:15mm}}
+  
+    .header-inner{position:relative;gap:22px}
+    .nav{gap:18px}
+    h2,h3,.result-label,.eyebrow,.focus-label{overflow-wrap:anywhere}
+    .header-controls{display:flex;align-items:center;gap:12px;flex-shrink:0}
+    .language-switch{display:none;border:1px solid #5d6d7c;border-radius:7px;padding:3px;gap:3px}
+    .js .language-switch{display:flex}
+    .language-button{min-width:42px;min-height:44px;border:0;border-radius:4px;padding:6px 9px;background:transparent;color:#c3d0dd;font:650 13px var(--mono);cursor:pointer}
+    .language-button:hover{color:#fff;background:#ffffff12}
+    .language-button[aria-pressed="true"]{background:var(--mint);color:var(--dark)}
+    @media(max-width:1000px){
+      .header-inner{min-height:78px}
+      .js .menu-toggle{display:inline-flex}
+      .js .nav{display:none;position:absolute;top:100%;left:-26px;right:-26px;padding:16px 26px 20px;background:#111a25;border-bottom:1px solid #4c5e6d;flex-direction:column;align-items:stretch;gap:3px}
+      .js .nav.is-open{display:flex}
+      .js .nav a{font-size:16px;padding:10px 0}
+      .js .nav .nav-cv{padding:10px 14px;margin-top:7px;text-align:center}
+      body:not(.js) .header-inner{flex-wrap:wrap;padding-block:14px}
+      body:not(.js) .nav{width:100%;justify-content:flex-start}
+    }
+    @media(max-width:760px){.js .nav{left:-20px;right:-20px;padding-inline:20px}}
+    @media(max-width:460px){.brand-name{display:none}.header-inner{gap:12px}}
+</style>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="text_001">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Laura Puschitz home" data-i18n-aria="aria_home"><span class="brand-mark" aria-hidden="true">LP</span><span class="brand-name">Laura Puschitz</span></a>
+      <nav class="nav" id="main-nav" aria-label="Main navigation" data-i18n-aria="aria_nav">
+        <a href="#experience" data-i18n="text_002">Experience</a><a href="#projects" data-i18n="text_003">Projects</a><a href="#skills" data-i18n="text_004">Skills</a><a href="#contact" data-i18n="text_005">Contact</a><a href="cv-en.pdf" class="nav-cv" download="Laura_Puschitz_CV_2026_EN.pdf" data-cv="download" data-i18n="text_006">Download CV</a>
+      </nav>
+    <div class="header-controls"><div class="language-switch" role="group" aria-label="Website language" data-i18n-aria="aria_language"><button class="language-button" type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button><button class="language-button" type="button" data-language="de" lang="de" aria-label="Deutsch" aria-pressed="false">DE</button></div><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      </div></div>
+  </header>
+  <main id="main">
+    <section class="hero dark" id="top" aria-labelledby="hero-name">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow" data-i18n="text_007">Electronics / Software / Automation</p>
+          <h1 id="hero-name">Laura<br>Puschitz<span class="dot">.</span></h1>
+          <p class="hero-title" data-i18n="text_008">Electronics &amp; IT professional.<br>Application &amp; solutions focus.</p>
+          <p class="hero-copy" data-i18n="text_009">I combine practical electronics knowledge with software and automation skills — from NPI and hardware testing to technical customer communication and process improvement.</p>
+          <div class="actions">
+            <a class="button button-primary" href="cv-en.pdf" download="Laura_Puschitz_CV_2026_EN.pdf" data-cv="download" data-i18n="text_006">Download CV</a>
+            <a class="button button-outline" href="cv-en.pdf" data-cv="view" target="_blank" rel="noopener noreferrer" data-i18n="text_010">View CV</a><a class="button button-outline" href="mailto:l.puschitz@outlook.com" data-i18n="text_011">Email me</a>
+          </div>
+          <p class="hero-meta" data-i18n="text_012">Luftenberg an der Donau, Austria<br><a href="https://github.com/lpuschitz" target="_blank" rel="noopener noreferrer">github.com/lpuschitz</a></p>
+        </div>
+        <figure class="profile">
+          <div class="portrait-frame">
+            <span class="monogram" aria-hidden="true">LP</span>
+            <img class="portrait" id="portrait" alt="Portrait of Laura Puschitz" width="800" height="940" hidden>
+          </div>
+          <figcaption class="profile-caption"><span data-i18n="text_013"><strong>Technical understanding.</strong><br>Customer needs. Process improvement.</span><span class="caption-rule" aria-hidden="true"></span></figcaption>
+        </figure>
+      </div>
+      <div class="results">
+        <div class="wrap results-grid">
+          <div class="result"><span class="result-number">100</span><span class="result-label" data-i18n="text_014">BOM costing / feasibility cases</span><span class="result-context">NPI · Kontron Austria</span></div>
+          <div class="result"><span class="result-number">15</span><span class="result-label" data-i18n="text_015">Production handovers</span><span class="result-context">NPI · Kontron Austria</span></div>
+          <div class="result"><span class="result-number">13 – 15<span class="to" aria-label="to" data-i18n-aria="to">›</span>7 – 8 <span class="unit">min</span></span><span class="result-label" data-i18n="text_016">One device's test time, before and after automation</span><span class="result-context" data-i18n="text_017">Approximate times · eurofunk KAPPACHER</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="focus" aria-labelledby="focus-title">
+      <div class="wrap">
+        <div class="section-head"><div><span class="section-index" data-i18n="text_018">01 / FOCUS</span><h2 id="focus-title" data-i18n="text_019">Where my experience meets<br>my next career direction.</h2></div><p class="section-intro" data-i18n="text_020">I am focusing on application, solutions and software-oriented roles where technical understanding, customer needs and process improvement meet.</p></div>
+        <div class="focus-grid">
+          <article class="focus-item"><span class="focus-label" data-i18n="text_021">CUSTOMERS &amp; SOLUTIONS</span><h3 data-i18n="text_022">Technical customer interface</h3><p data-i18n="text_023">Clarifying requirements and technical questions with industrial customers, international customers and OEMs. Recommending practical solutions and coordinating with internal teams.</p></article>
+          <article class="focus-item"><span class="focus-label" data-i18n="text_024">ELECTRONICS &amp; MANUFACTURING</span><h3 data-i18n="text_025">From prototype to production</h3><p data-i18n="text_026">PCB/PCBA, BOM costing, feasibility, prototype builds and production handovers. Working with Sales, Purchasing, suppliers, Quality and Production to resolve technical issues.</p></article>
+          <article class="focus-item"><span class="focus-label" data-i18n="text_027">SOFTWARE &amp; AUTOMATION</span><h3 data-i18n="text_028">Tests and workflows</h3><p data-i18n="text_029">Automated hardware tests, test-adapter concepts and test-sequence optimization. Workflow automation and data analysis with Microsoft Power Platform, Excel/VBA and Python projects.</p></article>
+        </div>
+        <div class="career"><h3 data-i18n="text_030">Target roles</h3><p>Application Engineer · Technical Application Engineer · Solutions Engineer · Technical Solutions Engineer · Technical Consultant · Software/Automation Engineer · QA/Test Automation Engineer · Engineering Tools Developer · Manufacturing Software Engineer · Technical Product Specialist</p></div>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <div class="section-head"><div><span class="section-index" data-i18n="text_031">02 / EXPERIENCE</span><h2 id="experience-title" data-i18n="text_032">Hands-on technical work.<br>Across teams and processes.</h2></div><p class="section-intro" data-i18n="text_033">Experience in electronics manufacturing, automated testing, customer communication and process automation.</p></div>
+        <article class="experience">
+          <div><p class="experience-date" data-i18n="text_034">09/2025 – present</p><p class="company">Kontron Austria GmbH</p></div>
+          <div><h3>NPI Engineer</h3><ul><li data-i18n="text_035">Coordinate prototype-to-production transitions, including BOM costing and technical feasibility analyses: <strong>100 BOM costing/feasibility cases</strong> and <strong>15 production handovers</strong>.</li><li data-i18n="text_036">Technical interface for industrial customers, international customers and OEMs via e-mail, phone and Teams.</li><li data-i18n="text_037">Clarify technical questions and recommend solutions for PCB/PCBA, product changes, BOMs, specifications and manufacturing problems.</li><li data-i18n="text_038">Coordinate prototype builds, approvals and resolution of issues that could prevent series production, working with Sales, Purchasing, suppliers, Quality and Production.</li></ul></div>
+        </article>
+        <article class="experience">
+          <div><p class="experience-date" data-i18n="text_034">09/2025 – present</p><p class="company">Kontron Austria GmbH</p><span class="responsibility" data-i18n="text_039">Additional responsibility</span></div>
+          <div><h3>ESG Data Collection Coordinator</h3><ul><li data-i18n="text_040">Prepare and consolidate ESG data for group reporting, including datasets with <strong>more than 17,000 rows</strong>.</li><li data-i18n="text_041">Coordinate data collection across Accounting, HR, Facility Management, IT and Procurement.</li><li data-i18n="text_042">Use Power Automate, Power BI, Power Query, SharePoint, Excel/VBA and Planner to standardize and automate workflows.</li><li data-i18n="text_043">Implemented an automated NPI costing workflow with Sales and Purchasing interfaces and monitoring via Planner.</li></ul></div>
+        </article>
+        <article class="experience">
+          <div><p class="experience-date">09/2018 – 09/2025</p><p class="company">eurofunk KAPPACHER GmbH</p></div>
+          <div><h3>Senior Hardware Test Engineer</h3><ul><li data-i18n="text_044">Developed automated test systems and test-adapter hardware for PCBAs, complete devices, embedded systems, communication systems and control units.</li><li data-i18n="text_045">Reduced one device's test time from <strong>approximately 13–15 minutes to 7–8 minutes</strong> through automation and test-process optimization.</li><li data-i18n="text_046">Optimized test sequences to reduce manual work, unnecessary reconfiguration and repeated steps.</li><li data-i18n="text_047">Used Jira with hardware development and Confluence for technical and test documentation. Worked with Production on manufacturing problems and documented test workflows.</li></ul></div>
+        </article>
+        <article class="experience">
+          <div><p class="experience-date">2020 – 2025</p><p class="company">eurofunk KAPPACHER GmbH</p><span class="responsibility" data-i18n="text_039">Additional responsibility</span></div>
+          <div><h3 data-i18n="text_048">Apprenticeship Trainer — Production</h3><ul><li data-i18n="text_049">Completed the official WIFI Austria apprenticeship-trainer course, including professional interview.</li><li data-i18n="text_050">Independently supervised <strong>approximately 10–17 apprentices</strong>, typically for 1–3 months each; explained electronics, test systems and production processes, assigned and checked tasks, and gave feedback.</li><li data-i18n="text_051">Presented technical topics and manufacturing problems to managers and colleagues, a department topic to <strong>approximately 150 people</strong>, and an apprentice project to the Managing Director and technical supervisors.</li></ul></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-head"><div><span class="section-index" data-i18n="text_052">03 / SELECTED PROJECTS</span><h2 id="projects-title" data-i18n="text_053">Automation in practice.</h2></div><p class="section-intro" data-i18n="text_054">Test-system development, production workflows and a Python concept for Gerber analysis.</p></div>
+        <div class="project-list">
+          <article class="project"><span class="project-number" aria-hidden="true">01</span><div><h3 data-i18n="text_055">Automated Hardware Test Systems</h3><p data-i18n="text_056">End-to-end development of test concepts and test-adapter hardware for newly developed electronic assemblies. Designed to minimize manual actions and repeated configuration.</p></div><div class="project-tags"><span class="tag">PCB/PCBA</span><span class="tag" data-i18n="text_057">Test automation</span><span class="tag" data-i18n="text_058">Test adapters</span></div></article>
+          <article class="project"><span class="project-number" aria-hidden="true">02</span><div><h3 data-i18n="text_059">NPI Process Automation</h3><p data-i18n="text_060">Automated parts of the NPI costing workflow, with interfaces to Sales and Purchasing and monitoring via Planner.</p></div><div class="project-tags"><span class="tag">Power Automate</span><span class="tag">Planner</span><span class="tag">NPI</span></div></article>
+          <article class="project"><span class="project-number" aria-hidden="true">03</span><div><h3>Gerber DFM/DFA Analyzer</h3><p data-i18n="text_061">Python concept and first prototype for rendering Gerber data, checking configurable design rules, and generating component counts and categories.</p></div><div class="project-tags"><span class="tag">Python</span><span class="tag" data-i18n="text_062">Gerber data</span><span class="tag" data-i18n="text_063">First prototype</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section toolkit-section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <div class="section-head"><div><span class="section-index" data-i18n="text_064">04 / TOOLKIT</span><h2 id="skills-title" data-i18n="text_065">Electronics, software<br>and technical communication.</h2></div></div>
+        <div class="toolkit-grid">
+          <article class="skill-group"><h3 data-i18n="text_066">Software &amp; automation</h3><p data-i18n="text_067">Python · Java · C++ test-environment exposure · Power Automate · Power BI · Power Query · SharePoint · Excel/VBA · Planner</p></article>
+          <article class="skill-group"><h3 data-i18n="text_068">Electronics &amp; manufacturing</h3><p data-i18n="text_069">PCB/PCBA · NPI · BOM · Costing · Feasibility · Prototype builds · Production handover · Specifications · Embedded systems · Communication systems · Controls</p></article>
+          <article class="skill-group"><h3 data-i18n="text_070">Application &amp; solutions</h3><p data-i18n="text_071">Technical customer communication · Requirements clarification · Solution recommendation · Technical presentations · Cross-functional coordination · Technical sales support</p></article>
+          <article class="skill-group"><h3 data-i18n="text_072">Engineering tools</h3><p data-i18n="text_073">Jira · Confluence · Multimeter · Oscilloscope · Logic Analyzer · Electronic Load · CAN Analyzer · JTAG · Frequency Generator</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <div class="section-head"><div><span class="section-index" data-i18n="text_074">05 / EDUCATION &amp; TRAINING</span><h2 id="education-title" data-i18n="text_075">A foundation in electronics<br>and information technology.</h2></div></div>
+        <div class="education-grid">
+          <ul class="education-list">
+            <li><span class="education-date">2014 – 2018</span><h3 data-i18n="text_076">Dual apprenticeship</h3><p>Angewandte Elektronik + Informationstechnologin-Technik (IT-Technik)</p></li>
+            <li><span class="education-date">2017 – 2023</span><h3 data-i18n="text_077">High school diploma</h3><p data-i18n="text_078">Evening school, Salzburg</p></li>
+            <li><span class="education-date" data-i18n="text_079">2024 – 2025 · Discontinued</span><h3 data-i18n="text_080">BSc studies</h3><p data-i18n="text_081">Applied Electronics and Information Technology, JKU Linz</p></li>
+            <li><h3 data-i18n="text_082">Apprenticeship Trainer Course</h3><p data-i18n="text_083">WIFI Österreich · completed including professional interview</p></li>
+          </ul>
+          <aside class="languages" aria-labelledby="languages-title"><h3 id="languages-title" data-i18n="text_084">Languages</h3><div class="language-row"><strong data-i18n="text_085">German</strong><span data-i18n="text_086">Native</span></div><div class="language-row"><strong data-i18n="text_087">English</strong><span>B2–C1</span></div><p class="language-note" data-i18n="text_088">Regular technical communication with international customers and colleagues.</p></aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact dark" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact-grid"><div><span class="section-index" data-i18n="text_089">06 / CONTACT</span><h2 id="contact-title">Laura Puschitz</h2><p class="hero-meta" data-i18n="text_090">Luftenberg an der Donau, Austria</p></div><div class="contact-links"><a class="email-link" href="mailto:l.puschitz@outlook.com">l.puschitz@outlook.com</a><div class="contact-secondary"><a href="https://github.com/lpuschitz" target="_blank" rel="noopener noreferrer" data-i18n="text_091">GitHub profile</a><a href="cv-en.pdf" download="Laura_Puschitz_CV_2026_EN.pdf" data-cv="download" data-i18n="text_006">Download CV</a></div></div></div>
+        <footer><p>Laura Puschitz</p><p data-i18n="text_007">Electronics / Software / Automation</p></footer>
+      </div>
+    </section>
+  </main>
+  <script>
+    // FOTO
+    const PROFILE_PHOTO = 'portrait.jpg';
+
+    const translations = {
+  "en": {
+    "text_001": "Skip to content",
+    "text_002": "Experience",
+    "text_003": "Projects",
+    "text_004": "Skills",
+    "text_005": "Contact",
+    "text_006": "Download CV",
+    "text_007": "Electronics / Software / Automation",
+    "text_008": "Electronics &amp; IT professional.<br>Application &amp; solutions focus.",
+    "text_009": "I combine practical electronics knowledge with software and automation skills — from NPI and hardware testing to technical customer communication and process improvement.",
+    "text_010": "View CV",
+    "text_011": "Email me",
+    "text_012": "Luftenberg an der Donau, Austria<br><a href=\"https://github.com/lpuschitz\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/lpuschitz</a>",
+    "text_013": "<strong>Technical understanding.</strong><br>Customer needs. Process improvement.",
+    "text_014": "BOM costing / feasibility cases",
+    "text_015": "Production handovers",
+    "text_016": "One device's test time, before and after automation",
+    "text_017": "Approximate times · eurofunk KAPPACHER",
+    "text_018": "01 / FOCUS",
+    "text_019": "Where my experience meets<br>my next career direction.",
+    "text_020": "I am focusing on application, solutions and software-oriented roles where technical understanding, customer needs and process improvement meet.",
+    "text_021": "CUSTOMERS &amp; SOLUTIONS",
+    "text_022": "Technical customer interface",
+    "text_023": "Clarifying requirements and technical questions with industrial customers, international customers and OEMs. Recommending practical solutions and coordinating with internal teams.",
+    "text_024": "ELECTRONICS &amp; MANUFACTURING",
+    "text_025": "From prototype to production",
+    "text_026": "PCB/PCBA, BOM costing, feasibility, prototype builds and production handovers. Working with Sales, Purchasing, suppliers, Quality and Production to resolve technical issues.",
+    "text_027": "SOFTWARE &amp; AUTOMATION",
+    "text_028": "Tests and workflows",
+    "text_029": "Automated hardware tests, test-adapter concepts and test-sequence optimization. Workflow automation and data analysis with Microsoft Power Platform, Excel/VBA and Python projects.",
+    "text_030": "Target roles",
+    "text_031": "02 / EXPERIENCE",
+    "text_032": "Hands-on technical work.<br>Across teams and processes.",
+    "text_033": "Experience in electronics manufacturing, automated testing, customer communication and process automation.",
+    "text_034": "09/2025 – present",
+    "text_035": "Coordinate prototype-to-production transitions, including BOM costing and technical feasibility analyses: <strong>100 BOM costing/feasibility cases</strong> and <strong>15 production handovers</strong>.",
+    "text_036": "Technical interface for industrial customers, international customers and OEMs via e-mail, phone and Teams.",
+    "text_037": "Clarify technical questions and recommend solutions for PCB/PCBA, product changes, BOMs, specifications and manufacturing problems.",
+    "text_038": "Coordinate prototype builds, approvals and resolution of issues that could prevent series production, working with Sales, Purchasing, suppliers, Quality and Production.",
+    "text_039": "Additional responsibility",
+    "text_040": "Prepare and consolidate ESG data for group reporting, including datasets with <strong>more than 17,000 rows</strong>.",
+    "text_041": "Coordinate data collection across Accounting, HR, Facility Management, IT and Procurement.",
+    "text_042": "Use Power Automate, Power BI, Power Query, SharePoint, Excel/VBA and Planner to standardize and automate workflows.",
+    "text_043": "Implemented an automated NPI costing workflow with Sales and Purchasing interfaces and monitoring via Planner.",
+    "text_044": "Developed automated test systems and test-adapter hardware for PCBAs, complete devices, embedded systems, communication systems and control units.",
+    "text_045": "Reduced one device's test time from <strong>approximately 13–15 minutes to 7–8 minutes</strong> through automation and test-process optimization.",
+    "text_046": "Optimized test sequences to reduce manual work, unnecessary reconfiguration and repeated steps.",
+    "text_047": "Used Jira with hardware development and Confluence for technical and test documentation. Worked with Production on manufacturing problems and documented test workflows.",
+    "text_048": "Apprenticeship Trainer — Production",
+    "text_049": "Completed the official WIFI Austria apprenticeship-trainer course, including professional interview.",
+    "text_050": "Independently supervised <strong>approximately 10–17 apprentices</strong>, typically for 1–3 months each; explained electronics, test systems and production processes, assigned and checked tasks, and gave feedback.",
+    "text_051": "Presented technical topics and manufacturing problems to managers and colleagues, a department topic to <strong>approximately 150 people</strong>, and an apprentice project to the Managing Director and technical supervisors.",
+    "text_052": "03 / SELECTED PROJECTS",
+    "text_053": "Automation in practice.",
+    "text_054": "Test-system development, production workflows and a Python concept for Gerber analysis.",
+    "text_055": "Automated Hardware Test Systems",
+    "text_056": "End-to-end development of test concepts and test-adapter hardware for newly developed electronic assemblies. Designed to minimize manual actions and repeated configuration.",
+    "text_057": "Test automation",
+    "text_058": "Test adapters",
+    "text_059": "NPI Process Automation",
+    "text_060": "Automated parts of the NPI costing workflow, with interfaces to Sales and Purchasing and monitoring via Planner.",
+    "text_061": "Python concept and first prototype for rendering Gerber data, checking configurable design rules, and generating component counts and categories.",
+    "text_062": "Gerber data",
+    "text_063": "First prototype",
+    "text_064": "04 / TOOLKIT",
+    "text_065": "Electronics, software<br>and technical communication.",
+    "text_066": "Software &amp; automation",
+    "text_067": "Python · Java · C++ test-environment exposure · Power Automate · Power BI · Power Query · SharePoint · Excel/VBA · Planner",
+    "text_068": "Electronics &amp; manufacturing",
+    "text_069": "PCB/PCBA · NPI · BOM · Costing · Feasibility · Prototype builds · Production handover · Specifications · Embedded systems · Communication systems · Controls",
+    "text_070": "Application &amp; solutions",
+    "text_071": "Technical customer communication · Requirements clarification · Solution recommendation · Technical presentations · Cross-functional coordination · Technical sales support",
+    "text_072": "Engineering tools",
+    "text_073": "Jira · Confluence · Multimeter · Oscilloscope · Logic Analyzer · Electronic Load · CAN Analyzer · JTAG · Frequency Generator",
+    "text_074": "05 / EDUCATION &amp; TRAINING",
+    "text_075": "A foundation in electronics<br>and information technology.",
+    "text_076": "Dual apprenticeship",
+    "text_077": "High school diploma",
+    "text_078": "Evening school, Salzburg",
+    "text_079": "2024 – 2025 · Discontinued",
+    "text_080": "BSc studies",
+    "text_081": "Applied Electronics and Information Technology, JKU Linz",
+    "text_082": "Apprenticeship Trainer Course",
+    "text_083": "WIFI Österreich · completed including professional interview",
+    "text_084": "Languages",
+    "text_085": "German",
+    "text_086": "Native",
+    "text_087": "English",
+    "text_088": "Regular technical communication with international customers and colleagues.",
+    "text_089": "06 / CONTACT",
+    "text_090": "Luftenberg an der Donau, Austria",
+    "text_091": "GitHub profile",
+    "menu": "Menu",
+    "close": "Close",
+    "aria_language": "Website language",
+    "aria_home": "Laura Puschitz home",
+    "aria_nav": "Main navigation",
+    "portrait_alt": "Portrait of Laura Puschitz",
+    "to": "to",
+    "page_title": "Laura Puschitz | Electronics, Software & Automation",
+    "page_description": "Laura Puschitz — electronics and IT professional with experience in NPI, hardware testing, technical customer communication and process automation.",
+    "og_title": "Laura Puschitz — Electronics, Software & Automation",
+    "og_description": "NPI, automated hardware testing and technical solutions. Explore my experience, projects and CV."
+  },
+  "de": {
+    "text_001": "Zum Inhalt",
+    "text_002": "Berufserfahrung",
+    "text_003": "Projekte",
+    "text_004": "Kenntnisse",
+    "text_005": "Kontakt",
+    "text_006": "CV herunterladen",
+    "text_007": "Elektronik / Software / Automatisierung",
+    "text_008": "Fachkraft für Elektronik und IT.<br>Schwerpunkt Application &amp; Solutions.",
+    "text_009": "Ich verbinde praktisches Elektronikwissen mit Software- und Automatisierungskenntnissen – von NPI und Hardwaretests bis zu technischer Kundenkommunikation und Prozessverbesserung.",
+    "text_010": "CV ansehen",
+    "text_011": "E-Mail schreiben",
+    "text_012": "Luftenberg an der Donau, Österreich<br><a href=\"https://github.com/lpuschitz\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/lpuschitz</a>",
+    "text_013": "<strong>Technisches Verständnis.</strong><br>Kundenanforderungen. Prozessverbesserung.",
+    "text_014": "Fälle zur Stücklistenkalkulation / Machbarkeitsprüfung",
+    "text_015": "Produktionsübergaben",
+    "text_016": "Testzeit eines Geräts vor und nach der Automatisierung",
+    "text_017": "Ungefähre Zeiten · eurofunk KAPPACHER",
+    "text_018": "01 / SCHWERPUNKT",
+    "text_019": "Erfahrung und<br>berufliche Ausrichtung.",
+    "text_020": "Ich richte meine berufliche Entwicklung auf Application-, Solutions- und softwareorientierte Positionen aus, in denen technisches Verständnis, Kundenanforderungen und Prozessverbesserung zusammenkommen.",
+    "text_021": "KUNDEN &amp; LÖSUNGEN",
+    "text_022": "Technische Kundenschnittstelle",
+    "text_023": "Anforderungen und technische Fragen mit Industriekunden, internationalen Kunden und OEMs klären. Praktische Lösungen empfehlen und mit internen Teams abstimmen.",
+    "text_024": "ELEKTRONIK &amp; FERTIGUNG",
+    "text_025": "Vom Prototyp zur Produktion",
+    "text_026": "PCB/PCBA, Stücklistenkalkulation, Machbarkeit, Prototypenfertigung und Produktionsübergaben. Technische Fragen gemeinsam mit Vertrieb, Einkauf, Lieferanten, Qualität und Produktion lösen.",
+    "text_027": "SOFTWARE &amp; AUTOMATISIERUNG",
+    "text_028": "Tests und Arbeitsabläufe",
+    "text_029": "Automatisierte Hardwaretests, Testadapter-Konzepte und optimierte Prüfabläufe. Automatisierung und Datenanalyse mit Microsoft Power Platform und Excel/VBA sowie Python-Projekte.",
+    "text_030": "Zielpositionen",
+    "text_031": "02 / BERUFSERFAHRUNG",
+    "text_032": "Praktische technische Arbeit.<br>Über Team- und Prozessgrenzen hinweg.",
+    "text_033": "Erfahrung in Elektronikfertigung, automatisierten Tests, Kundenkommunikation und Prozessautomatisierung.",
+    "text_034": "09/2025 – heute",
+    "text_035": "Übergänge vom Prototyp zur Produktion koordinieren, einschließlich Stücklistenkalkulation und technischer Machbarkeitsanalysen: <strong>100 Fälle zur Stücklistenkalkulation und Machbarkeitsprüfung</strong> sowie <strong>15 Produktionsübergaben</strong>.",
+    "text_036": "Technische Schnittstelle für Industriekunden, internationale Kunden und OEMs per E-Mail, Telefon und Teams.",
+    "text_037": "Technische Fragen klären und Lösungen für PCB/PCBA, Produktänderungen, Stücklisten, Spezifikationen und Fertigungsprobleme empfehlen.",
+    "text_038": "Prototypenfertigung, Freigaben und die Behebung von Problemen koordinieren, die eine Serienproduktion verhindern könnten. Dabei mit Vertrieb, Einkauf, Lieferanten, Qualität und Produktion zusammenarbeiten.",
+    "text_039": "Zusätzliche Verantwortung",
+    "text_040": "ESG-Daten für die Konzernberichterstattung aufbereiten und konsolidieren, einschließlich Datensätzen mit <strong>mehr als 17.000 Zeilen</strong>.",
+    "text_041": "Datenerhebung in Buchhaltung, HR, Facility Management, IT und Beschaffung koordinieren.",
+    "text_042": "Arbeitsabläufe mit Power Automate, Power BI, Power Query, SharePoint, Excel/VBA und Planner standardisieren und automatisieren.",
+    "text_043": "Automatisierten NPI-Kalkulationsablauf mit Schnittstellen zu Vertrieb und Einkauf sowie Überwachung über Planner umgesetzt.",
+    "text_044": "Automatisierte Testsysteme und Testadapter-Hardware für PCBAs, komplette Geräte, eingebettete Systeme, Kommunikationssysteme und Steuergeräte entwickelt.",
+    "text_045": "Testzeit eines Geräts durch Automatisierung und Optimierung des Prüfprozesses von <strong>ca. 13–15 Minuten auf ca. 7–8 Minuten</strong> verkürzt.",
+    "text_046": "Prüfabläufe optimiert, um manuelle Arbeit, unnötige Neukonfigurationen und wiederholte Schritte zu reduzieren.",
+    "text_047": "Jira für die Zusammenarbeit mit der Hardwareentwicklung und Confluence für technische und Testdokumentation eingesetzt. Mit der Produktion Fertigungsprobleme bearbeitet und Prüfabläufe dokumentiert.",
+    "text_048": "Lehrlingsausbildung – Produktion",
+    "text_049": "Offiziellen WIFI-Ausbilderkurs inklusive Fachgespräch abgeschlossen.",
+    "text_050": "<strong>Ca. 10–17 Lehrlinge</strong> eigenständig betreut, üblicherweise jeweils für 1–3 Monate. Elektronik, Testsysteme und Produktionsprozesse erklärt, Aufgaben zugeteilt und kontrolliert sowie Feedback gegeben.",
+    "text_051": "Technische Themen und Fertigungsprobleme vor Führungskräften und Kollegen präsentiert. Ein Abteilungsthema vor <strong>ca. 150 Personen</strong> sowie ein Lehrlingsprojekt vor der Geschäftsführung und technischen Betreuungspersonen vorgestellt.",
+    "text_052": "03 / AUSGEWÄHLTE PROJEKTE",
+    "text_053": "Automatisierung in der Praxis.",
+    "text_054": "Entwicklung von Testsystemen, Produktionsabläufe und ein Python-Konzept zur Gerber-Analyse.",
+    "text_055": "Automatisierte Hardware-Testsysteme",
+    "text_056": "Durchgängige Entwicklung von Testkonzepten und Testadapter-Hardware für neu entwickelte elektronische Baugruppen. Ausgelegt auf möglichst wenige manuelle Eingriffe und wiederholte Konfigurationen.",
+    "text_057": "Testautomatisierung",
+    "text_058": "Testadapter",
+    "text_059": "NPI-Prozessautomatisierung",
+    "text_060": "Teile des NPI-Kalkulationsablaufs mit Schnittstellen zu Vertrieb und Einkauf sowie Überwachung über Planner automatisiert.",
+    "text_061": "Python-Konzept und erster Prototyp zur Darstellung von Gerber-Daten, Prüfung konfigurierbarer Designregeln sowie Ermittlung von Bauteilanzahlen und Kategorien.",
+    "text_062": "Gerber-Daten",
+    "text_063": "Erster Prototyp",
+    "text_064": "04 / KENNTNISSE",
+    "text_065": "Elektronik, Software<br>und technische Kommunikation.",
+    "text_066": "Software &amp; Automatisierung",
+    "text_067": "Python · Java · Einblicke in eine C++ Testumgebung · Power Automate · Power BI · Power Query · SharePoint · Excel/VBA · Planner",
+    "text_068": "Elektronik &amp; Fertigung",
+    "text_069": "PCB/PCBA · NPI · Stücklisten · Kalkulation · Machbarkeit · Prototypenfertigung · Produktionsübergaben · Spezifikationen · Eingebettete Systeme · Kommunikationssysteme · Steuerungen",
+    "text_070": "Technische Anwendungen &amp; Lösungen",
+    "text_071": "Technische Kundenkommunikation · Anforderungsklärung · Lösungsempfehlungen · Technische Präsentationen · Bereichsübergreifende Koordination · Technische Vertriebsunterstützung",
+    "text_072": "Technische Werkzeuge",
+    "text_073": "Jira · Confluence · Multimeter · Oszilloskop · Logikanalysator · Elektronische Last · CAN-Analysator · JTAG · Frequenzgenerator",
+    "text_074": "05 / AUSBILDUNG &amp; WEITERBILDUNG",
+    "text_075": "Grundlagen in Elektronik<br>und Informationstechnologie.",
+    "text_076": "Doppellehre",
+    "text_077": "Schulabschluss",
+    "text_078": "Abendschule, Salzburg",
+    "text_079": "2024 – 2025 · Abgebrochen",
+    "text_080": "BSc-Studium",
+    "text_081": "Angewandte Elektronik und Informationstechnologie, JKU Linz",
+    "text_082": "Ausbilderkurs",
+    "text_083": "WIFI Österreich · inklusive Fachgespräch abgeschlossen",
+    "text_084": "Sprachen",
+    "text_085": "Deutsch",
+    "text_086": "Muttersprache",
+    "text_087": "Englisch",
+    "text_088": "Regelmäßige technische Kommunikation mit internationalen Kunden und Kollegen.",
+    "text_089": "06 / KONTAKT",
+    "text_090": "Luftenberg an der Donau, Österreich",
+    "text_091": "GitHub-Profil",
+    "menu": "Menü",
+    "close": "Schließen",
+    "aria_language": "Sprache der Website",
+    "aria_home": "Laura Puschitz Startseite",
+    "aria_nav": "Hauptnavigation",
+    "portrait_alt": "Porträt von Laura Puschitz",
+    "to": "bis",
+    "page_title": "Laura Puschitz | Elektronik, Software & Automatisierung",
+    "page_description": "Laura Puschitz – Fachkraft für Elektronik und IT mit Erfahrung in NPI, Hardwaretests, technischer Kundenkommunikation und Prozessautomatisierung.",
+    "og_title": "Laura Puschitz – Elektronik, Software & Automatisierung",
+    "og_description": "NPI, automatisierte Hardwaretests und technische Lösungen. Berufserfahrung, Projekte und Lebenslauf im Überblick."
+  }
+};
+    const cvFiles = {en: 'cv-en.pdf', de: 'cv-de.pdf'};
+    const languageStorageKey = 'laura-cv-language';
+    let currentLanguage = 'en';
+    document.body.classList.add('js');
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('main-nav');
+    const languageButtons = document.querySelectorAll('[data-language]');
+
+    function updateMenuLabel() {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.textContent = translations[currentLanguage][open ? 'close' : 'menu'];
+    }
+
+    function setLanguage(language, remember = true) {
+      currentLanguage = language === 'de' ? 'de' : 'en';
+      const text = translations[currentLanguage];
+      document.documentElement.lang = currentLanguage;
+      document.title = text.page_title;
+      document.querySelector('meta[name="description"]').setAttribute('content', text.page_description);
+      document.querySelector('meta[property="og:title"]').setAttribute('content', text.og_title);
+      document.querySelector('meta[property="og:description"]').setAttribute('content', text.og_description);
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        element.innerHTML = text[element.dataset.i18n];
+      });
+      document.querySelectorAll('[data-i18n-aria]').forEach(element => {
+        element.setAttribute('aria-label', text[element.dataset.i18nAria]);
+      });
+      document.querySelectorAll('[data-cv]').forEach(link => {
+        link.setAttribute('href', cvFiles[currentLanguage]);
+        if (link.dataset.cv === 'download') {
+          link.setAttribute('download', 'Laura_Puschitz_CV_2026_' + currentLanguage.toUpperCase() + '.pdf');
+        }
+      });
+      document.getElementById('portrait').alt = text.portrait_alt;
+      languageButtons.forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.language === currentLanguage));
+      });
+      updateMenuLabel();
+      if (remember) {
+        try { localStorage.setItem(languageStorageKey, currentLanguage); } catch (_) {}
+      }
+    }
+
+    function closeMenu() {
+      toggle.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('is-open');
+      updateMenuLabel();
+    }
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      toggle.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('is-open', open);
+      updateMenuLabel();
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    languageButtons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.language)));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
+        toggle.focus();
+      }
+    });
+    document.addEventListener('click', event => {
+      if (!event.target.closest('.header-inner')) closeMenu();
+    });
+    let savedLanguage = 'en';
+    try { savedLanguage = localStorage.getItem(languageStorageKey) || 'en'; } catch (_) {}
+    setLanguage(savedLanguage, false);
+
+    if (PROFILE_PHOTO) {
+      const portrait = document.getElementById('portrait');
+      portrait.addEventListener('load', () => {
+        portrait.hidden = false;
+        document.querySelector('.monogram').hidden = true;
+      });
+      portrait.addEventListener('error', () => {
+        portrait.hidden = true;
+        document.querySelector('.monogram').hidden = false;
+      });
+      portrait.src = PROFILE_PHOTO;
+    }
+</script>
+</body>
+</html>
